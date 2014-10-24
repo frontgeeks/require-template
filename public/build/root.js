@@ -1,0 +1,1 @@
+(function(){console.log("Root module"),require(["common"],function(){return console.log("Start load module by common")})}).call(this);

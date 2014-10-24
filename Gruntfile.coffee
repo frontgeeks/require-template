@@ -9,6 +9,26 @@ module.exports = (grunt) ->
         src: '{,**/}*.coffee'
         dest: 'public/js'
         ext: '.js'
+    requirejs:
+      main:
+        options:
+          appDir: 'public/js',
+          baseUrl: 'lib',
+          dir: 'public/build',
+          paths: {
+            app: '../app',
+            root: '../'
+          },
+          modules: [
+            {
+              name: '../common',
+              include: []
+            },
+            {
+              name: '../app/m3',
+              exclude: ['../common']
+            }
+          ]
     sass:
       app:
         options:
@@ -30,6 +50,7 @@ module.exports = (grunt) ->
         files:[
           'public/*.html'
           'public/css/*.css'
+          'public/js/*.js'
         ]
     connect:
       options:
@@ -46,7 +67,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-requirejs'
   grunt.loadNpmTasks 'grunt-newer'
+
 
   # Default task.
   grunt.registerTask 'default', ['coffee', 'sass', 'watch']

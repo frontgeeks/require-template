@@ -10,6 +10,12 @@
     "grunt-contrib-watch": "latest",
     "grunt-contrib-sass": "latest",
     "grunt-contrib-connect": "latest",
-    "grunt-newer": "latest"
+    "grunt-contrib-requirejs": "latest",
+    "grunt-newer": "latest",
+    "bower": "latest"
+
+  },
+  "scripts": {
+    "postinstall" : "node_modules/.bin/bower install"
   }
 }
