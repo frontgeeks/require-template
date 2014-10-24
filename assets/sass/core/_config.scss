@@ -1,0 +1,19 @@
+$susy: (
+  flow: ltr, // lrt | rlt
+  output: float, // float | isolate
+  math: fluid, // fluid | static (requires column-width)
+  column-width: false, // false | value,
+  container: 940px, // length or % | auto
+  container-position: center, // left | center | right | <length> [*2]
+  last-flow: to,
+  columns: 12,
+  gutters: .25,
+  gutter-position: inside, // before | after | split | inside |
+  global-box-sizing: content-box, // content | border-box
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);

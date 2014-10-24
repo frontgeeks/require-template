@@ -1,0 +1,15 @@
+{
+  "name": "mira-pro",
+  "description": "Mira grunt package",
+  "version": "0.1.0",
+  "private": "true",
+  "repository": "empty",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-coffee": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-newer": "latest"
+  }
+}
